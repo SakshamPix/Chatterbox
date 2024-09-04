@@ -2,13 +2,13 @@
 
 ## Overview
 
-ChatterBox is a real-time chat application that facilitates instant communication between users through seamless WebSocket connections powered by Socket.io. The application features a robust Node.js and Express backend with a modern, component-based React.js frontend that provides a dynamic and responsive user experience.
+ChatterBox is a real-time chat application that facilitates instant communication between users through seamless WebSocket connections powered by Socket.io. The application features a robust Node.js and Express backend with a clean and efficient frontend built using EJS templates, providing a dynamic and responsive user experience.
 
 ## Features
 
 - **Real-Time Messaging**: Enables instant communication between users with real-time message updates using Socket.io.
 - **Scalable Backend**: Built on Node.js and Express, ensuring efficient handling of real-time data and multiple concurrent connections.
-- **Modern React Frontend**: A fully responsive and modular UI built with React.js, providing a dynamic and intuitive chat experience across devices.
+- **EJS Templating**: A server-side rendered UI built with plain EJS, providing fast and reliable page rendering for a smooth chat experience across devices.
 - **Chat Rooms**: Supports multiple chat rooms or private messaging between users.
 - **Real-Time Notifications**: Provides real-time notifications for new messages.
 - **Responsive Design**: Optimized for both desktop and mobile use, ensuring a smooth user experience on all devices.
@@ -21,9 +21,8 @@ ChatterBox is a real-time chat application that facilitates instant communicatio
 - **Socket.io**: Library for real-time, bidirectional communication between web clients and servers.
 
 ### Frontend
-- **React.js**: JavaScript library for building user interfaces, leveraging component-based architecture for a modular and maintainable codebase.
-- **Axios**: Promise-based HTTP client for making API requests to the backend.
-- **CSS/SCSS**: Styling the application with modular and responsive design principles.
+- **EJS**: Embedded JavaScript templates for server-side rendering.
+- **CSS**: Styling the application with responsive design principles.
 
 ## Getting Started
 
@@ -33,55 +32,35 @@ ChatterBox is a real-time chat application that facilitates instant communicatio
 
 ## Installation and Running the Application
 
-1. **Install Backend Dependencies**:
+1. **Install Dependencies**:
 
     ```bash
-    cd server
     npm install
     ```
 
-2. **Install Frontend Dependencies**:
+2. **Run the Application**:
 
     ```bash
-    cd ../client
-    npm install
+    npm start
     ```
 
-3. **Run the Application**:
-
-    - **Backend**:
-
-        ```bash
-        cd server
-        npm start
-        ```
-
-    - **Frontend**:
-
-        ```bash
-        cd ../client
-        npm start
-        ```
-
-4. **Access the Application**:
+3. **Access the Application**:
 
     Open your browser and navigate to [http://localhost:4000](http://localhost:4000) to use the ChatterBox application.
 
 ## Project Structure
 
-### Backend (`/server`)
+### Backend
 
 - **`/controllers`**: Handles the application logic for various routes.
 - **`/routes`**: Defines API routes for handling requests.
 - **`/sockets`**: Manages WebSocket connections using Socket.io.
+- **`/views`**: Contains the EJS templates for rendering the frontend.
 
-### Frontend (`/client`)
+### Frontend (EJS Templates)
 
-- **`/src/components`**: Reusable React components (e.g., ChatWindow, MessageInput).
-- **`/src/pages`**: Page-level components (e.g., Home, ChatRoom).
-- **`/src/context`**: React Context for managing global state (e.g., chat state).
-- **`/src/services`**: API service functions using Axios for communicating with the backend.
-- **`/src/styles`**: CSS/SCSS files for styling the components.
+- **`/views`**: EJS templates that render pages such as ChatWindow and MessageInput directly on the server-side.
+- **`/public`**: Static files like CSS and client-side JavaScript for styling and enhancing interactivity.
 
 ## Key Features
 
@@ -107,6 +86,5 @@ Real-time notifications inform users of new messages and updates, enhancing the 
 ## Acknowledgements
 
 - **Socket.io**: For enabling real-time communication in the application.
-- **React.js**: For providing a robust framework for building the frontend UI.
+- **EJS**: For providing a simple yet effective templating system.
 - **Express.js**: For creating a simple yet powerful backend.
-
